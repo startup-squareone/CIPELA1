@@ -84,6 +84,12 @@ nav a {
     font-weight: bold;
     font-size: 18px;
 }
+
+.Puma img {
+    max-width: 10%;
+    height: auto;
+}
+
 /* Style the products section (customize this section for product listings) */
 .products {
     margin: 20px;
