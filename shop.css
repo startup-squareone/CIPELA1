@@ -55,6 +55,35 @@ nav a {
     font-size: 18px;
 }
 
+/* Style the brand section */
+.brands {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.brands h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.brands ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.brands li {
+    margin: 10px 0;
+}
+
+.brands a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
 /* Style the products section (customize this section for product listings) */
 .products {
     margin: 20px;
