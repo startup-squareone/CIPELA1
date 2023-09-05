@@ -60,5 +60,16 @@ categoryLinks.forEach((link) => {
     });
 });
 
+
+// Event listeners for brand links
+const brandLinks = document.querySelectorAll(".brands a");
+
+brandLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const selectedbrand = link.textContent;
+        displayProducts(selectedbrand);
+    });
+});
 // Initial display of all products
 displayProducts(null);
