@@ -1,5 +1,12 @@
 // script.js
 
+const product = {
+    title: "Product Title",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    price: 99.99,
+    image: "product-image.jpg"
+};
+
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
