@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Measurement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #imageInput {
+            display: none;
+        }
+
+        #uploadButton {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #measurementResult {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shoe Measurement</h1>
+
+    <!-- Input for uploading an image -->
+    <input type="file" id="imageInput" accept="image/*">
+    
+    <!-- Button to trigger image upload -->
+    <label for="imageInput" id="uploadButton">Upload Foot Image</label>
+    
+    <!-- Display the measurement result -->
+    <div id="measurementResult"></div>
+
+    <script>
+        // Function to handle image upload and measurement
+        const imageInput = document.getElementById('imageInput');
+        const uploadButton = document.getElementById('uploadButton');
+        const measurementResult = document.getElementById('measurementResult');
+
+        uploadButton.addEventListener('click', function() {
+            imageInput.click(); // Trigger the hidden file input
+        });
+
+        imageInput.addEventListener('change', function() {
+            if (imageInput.files.length > 0) {
+                const file = imageInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    // Here, you can perform image processing and measurement calculations
+                    // Replace this with your actual code
+                    const measurement = calculateMeasurement(e.target.result);
+
+                    // Display the measurement result
+                    measurementResult.innerHTML = `Foot Measurement: ${measurement} cm`;
+                };
+
+                // Read the uploaded image as a data URL
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please select an image to measure.');
+            }
+        });
+
+        // Replace this function with your actual measurement calculation logic
+        function calculateMeasurement(imageData) {
+            // Simulated measurement calculation, replace with actual code
+            // For this example, we'll return a random number between 20 and 30 cm
+            return (Math.random() * 10 + 20).toFixed(2);
+        }
+    </script>
+</body>
+</html>
