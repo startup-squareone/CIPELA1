@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="profile.js">
+</head>
+<body>
+    <header>
+        <h1>My Profile</h1>
+    </header>
+
+    <section class="profile-info">
+        <h2>User Information</h2>
+        <div class="user-details">
+            <label for="username">Username:</label>
+            <span id="username">JohnDoe123</span>
+        </div>
+        <div class="user-details">
+            <label for="email">Email:</label>
+            <span id="email">johndoe@example.com</span>
+        </div>
+        <button id="editProfile">Edit Profile</button>
+    </section>
+
+    <section class="profile-edit" style="display: none;">
+        <h2>Edit Profile</h2>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" required>
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>
