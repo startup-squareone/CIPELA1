@@ -15,6 +15,35 @@ const customizationOptions = [
 ];
 
 
+// Event listener for the login form submission
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Perform login validation (you can replace this with your actual validation logic)
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (isValid(username, password)) {
+        // Hide the login form
+        document.querySelector('.login-form').style.display = 'none';
+
+        // Show the home page content
+        document.querySelector('.home-content').style.display = 'block';
+        
+        // Update the navigation menu (e.g., change "Login" to "Logout")
+        document.getElementById('loginButton').innerHTML = '<a href="#">Logout</a>';
+    } else {
+        // Display an error message (you can implement this part as needed)
+        alert('Invalid username or password. Please try again.');
+    }
+});
+
+function isValid(username, password) {
+    // Replace this with your actual validation logic (e.g., checking against a database)
+    // For this example, we assume a valid login when both fields are non-empty
+    return username.trim() !== '' && password.trim() !== '';
+}
+
 // Event listener for the Customize button
 document.getElementById("customizeButton").addEventListener("click", () => {
     // Display customization options and tools
