@@ -1,10 +1,5 @@
-// Define product data
-const product = {
-    title: "Product Title",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    price: 99.99,
-    image: "product-image.jpg"
-};
+
+
 
 // Define customization options (you can expand this)
 const customizationOptions = [
