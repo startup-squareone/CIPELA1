@@ -70,18 +70,6 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Style the product section */
-.product {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Style the customization and measurement tools (hidden by default) */
 .hidden {
