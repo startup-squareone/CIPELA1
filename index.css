@@ -38,24 +38,6 @@ nav a {
     height: auto;
 }
 
-.slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-height: 500px; /* Set your desired height */
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.5s ease-in-out;
-}
-
 /* Style the customization and measurement tools (hidden by default) */
 .hidden {
     display: none;
