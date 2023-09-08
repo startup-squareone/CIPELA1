@@ -16,13 +16,29 @@ function displayWishlistItems() {
         listItem.innerHTML = `
             <span>${item.name} (${item.price})</span>
             <button data-id="${item.id}">Remove</button>
-            <button data-id="${item.id}">Add to Cart</button>
         `;
         wishlistList.appendChild(listItem);
 
         // Add click event listener to remove item from wishlist
         const removeButton = listItem.querySelector('button');
         removeButton.addEventListener('click', removeFromWishlist);
+    
+
+    });
+}
+
+function displayWishlistItems() {
+    wishlistItems.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <span>${item.name} (${item.price})</span>
+            <button data-id="${item.id}">Add to Cart</button>
+        `;
+        wishlistList.appendChild(listItem);
+
+        // Add click event listener to remove item from wishlist
+        const addtocartButton = listItem.querySelector('button');
+        addtocartButton.addEventListener('click', Add to Cart);
     
 
     });
@@ -38,7 +54,14 @@ function removeFromWishlist(event) {
     displayWishlistItems(); // Display updated wishlist
 }
 
-
+function addtocart(event) {
+    const itemId = parseInt(event.target.getAttribute('data-id'), 10);
+    const updatedWishlist = wishlistItems.filter((item) => item.id !== itemId);
+    wishlistItems.length = 0;
+    updatedWishlist.forEach((item) => wishlistItems.push(item));
+    wishlistList.innerHTML = ''; // Clear the list
+    displayWishlistItems(); // Display updated wishlist
+}
 
 // Initialize the wishlist
 displayWishlistItems();
