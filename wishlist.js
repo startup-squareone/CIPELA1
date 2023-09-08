@@ -16,15 +16,13 @@ function displayWishlistItems() {
         listItem.innerHTML = `
             <span>${item.name} (${item.price})</span>
             <button data-id="${item.id}">Remove</button>
-            <button data-id="${item.id}">Add to Cart</button>
         `;
         wishlistList.appendChild(listItem);
 
         // Add click event listener to remove item from wishlist
         const removeButton = listItem.querySelector('button');
         removeButton.addEventListener('click', removeFromWishlist);
-        const addtocartbutton = listItem.querySelector('button');
-        addtocartbutton.addEventListener('click',AddtoCart);
+
     });
 }
 
