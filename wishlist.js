@@ -23,8 +23,7 @@ function displayWishlistItems() {
         // Add click event listener to remove item from wishlist
         const removeButton = listItem.querySelector('button');
         removeButton.addEventListener('click', removeFromWishlist);
-        const addtocartButton = listItem.querySelector('button');
-        addtocartButton.addEventListener('click', Add to Cart);
+    
 
     });
 }
@@ -39,14 +38,7 @@ function removeFromWishlist(event) {
     displayWishlistItems(); // Display updated wishlist
 }
 
-function addtocart(event) {
-    const itemId = parseInt(event.target.getAttribute('data-id'), 10);
-    const updatedWishlist = wishlistItems.filter((item) => item.id !== itemId);
-    wishlistItems.length = 0;
-    updatedWishlist.forEach((item) => wishlistItems.push(item));
-    wishlistList.innerHTML = ''; // Clear the list
-    displayWishlistItems(); // Display updated wishlist
-}
+
 
 // Initialize the wishlist
 displayWishlistItems();
