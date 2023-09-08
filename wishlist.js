@@ -2,9 +2,9 @@
 
 // Sample data for wishlisted items (you can replace this with your own data)
 const wishlistItems = [
-    { id: 1, name: 'Product 1', price: '$20.00' },
-    { id: 2, name: 'Product 2', price: '$25.00' },
-    { id: 3, name: 'Product 3', price: '$30.00' },
+    { id: 1, name: 'Product 1', price: 'Rs.999.00' },
+    { id: 2, name: 'Product 2', price: 'Rs.2500.00' },
+    { id: 3, name: 'Product 3', price: 'Rs.8500.00' },
 ];
 
 const wishlistList = document.getElementById('wishlistList');
